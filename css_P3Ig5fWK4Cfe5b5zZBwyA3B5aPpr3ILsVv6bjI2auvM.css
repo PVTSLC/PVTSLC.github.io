@@ -9,7 +9,7 @@
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px !important;
-  margin: !important;
+  margin:  !important;
   overflow: hidden !important;
   padding: 0 !important;
   width: 1px !important;
@@ -32,7 +32,7 @@ ul.sf-menu div {
 }
 
 ul.sf-menu {
-  line-height: 1;
+  line-height: 1.0;
   z-index: 497;
 }
 
@@ -67,14 +67,14 @@ ul.sf-menu li.sfHover ul {
   z-index: 499;
 }
 
-ul.sf-menu li:hover > ul,
-ul.sf-menu li.sfHover > ul {
+ul.sf-menu li:hover>ul,
+ul.sf-menu li.sfHover>ul {
   left: 0;
   top: 2.5em;
 }
 
-ul.sf-menu li li:hover > ul,
-ul.sf-menu li li.sfHover > ul {
+ul.sf-menu li li:hover>ul,
+ul.sf-menu li li.sfHover>ul {
   left: 12em;
   top: 0;
 }
@@ -108,7 +108,7 @@ ul.sf-menu .sf-sub-indicator {
   width: 12px;
 }
 
-ul.sf-menu .sf-sub-indicator::after {
+ul.sf-menu .sf-sub-indicator:after {
   content: "â–¼";
   left: 0;
   line-height: 1;
@@ -117,18 +117,18 @@ ul.sf-menu .sf-sub-indicator::after {
   top: 0;
 }
 
-ul.sf-menu ul .sf-sub-indicator::after {
+ul.sf-menu ul .sf-sub-indicator:after {
   content: "â–º";
 }
 
-ul.sf-menu a:focus > .sf-sub-indicator,
-ul.sf-menu a:hover > .sf-sub-indicator,
-ul.sf-menu a:active > .sf-sub-indicator,
-ul.sf-menu li:hover > a > .sf-sub-indicator,
-ul.sf-menu li.sfHover > a > .sf-sub-indicator,
-ul.sf-menu span.nolink:hover > .sf-sub-indicator,
-ul.sf-menu li:hover > span.nolink > .sf-sub-indicator,
-ul.sf-menu li.sfHover > span.nolink > .sf-sub-indicator {
+ul.sf-menu a:focus>.sf-sub-indicator,
+ul.sf-menu a:hover>.sf-sub-indicator,
+ul.sf-menu a:active>.sf-sub-indicator,
+ul.sf-menu li:hover>a>.sf-sub-indicator,
+ul.sf-menu li.sfHover>a>.sf-sub-indicator,
+ul.sf-menu span.nolink:hover>.sf-sub-indicator,
+ul.sf-menu li:hover>span.nolink>.sf-sub-indicator,
+ul.sf-menu li.sfHover>span.nolink>.sf-sub-indicator {
   opacity: 1;
 }
 
@@ -280,13 +280,13 @@ ul.sf-menu.sf-vertical li {
   width: 100%;
 }
 
-ul.sf-menu.sf-vertical li:hover > ul,
-ul.sf-menu.sf-vertical li.sfHover > ul {
+ul.sf-menu.sf-vertical li:hover>ul,
+ul.sf-menu.sf-vertical li.sfHover>ul {
   left: 12em;
   top: 0;
 }
 
-ul.sf-menu.sf-vertical .sf-sub-indicator::after {
+ul.sf-menu.sf-vertical .sf-sub-indicator:after {
   content: "â–º";
 }
 
@@ -300,8 +300,6 @@ ul.sf-menu.sf-navbar li {
 
 ul.sf-menu.sf-navbar li li {
   position: relative;
-  width: auto;
-  float: left;
 }
 
 ul.sf-menu.sf-navbar li ul,
@@ -309,24 +307,29 @@ ul.sf-menu.sf-navbar li li li {
   width: 100%;
 }
 
-ul.sf-menu.sf-navbar li li:hover > ul,
-ul.sf-menu.sf-navbar li li.sfHover > ul,
-ul.sf-menu.sf-navbar > li.active-trail > ul {
+ul.sf-menu.sf-navbar li li {
+  width: auto;
+  float: left;
+}
+
+ul.sf-menu.sf-navbar li li:hover>ul,
+ul.sf-menu.sf-navbar li li.sfHover>ul,
+ul.sf-menu.sf-navbar>li.active-trail>ul {
   left: 0;
   top: 2.5em;
 }
 
-ul.sf-menu.sf-navbar li li li:hover > ul,
-ul.sf-menu.sf-navbar li li li.sfHover > ul {
+ul.sf-menu.sf-navbar li li li:hover>ul,
+ul.sf-menu.sf-navbar li li li.sfHover>ul {
   left: 12em;
   top: 0;
 }
 
-ul.sf-menu.sf-navbar ul .sf-sub-indicator::after {
+ul.sf-menu.sf-navbar ul .sf-sub-indicator:after {
   content: "â–¼";
 }
 
-ul.sf-menu.sf-navbar ul ul .sf-sub-indicator::after {
+ul.sf-menu.sf-navbar ul ul .sf-sub-indicator:after {
   content: "â–º";
 }
 
@@ -348,28 +351,23 @@ ul.sf-menu.sf-accordion ul {
 }
 
 ul.sf-menu.sf-accordion.sf-expanded,
-ul.sf-menu.sf-accordion li.sf-expanded > ul {
+ul.sf-menu.sf-accordion li.sf-expanded>ul {
   left: auto !important;
   position: relative;
   top: auto !important;
 }
 
-ul.sf-menu.sf-accordion .sf-sub-indicator::after {
+ul.sf-menu.sf-accordion .sf-sub-indicator:after {
   content: "â–¼";
 }
 
-ul.sf-menu.sf-accordion.sf-accordion-with-buttons .sf-accordion-button::after {
+ul.sf-menu.sf-accordion.sf-accordion-with-buttons .sf-accordion-button:after {
   content: "â–¼";
   margin: 0 0 0 1em;
 }
 
-ul.sf-menu.sf-accordion.sf-accordion-with-buttons li.sf-expanded > .sf-accordion-button::after {
+ul.sf-menu.sf-accordion.sf-accordion-with-buttons li.sf-expanded>.sf-accordion-button:after {
   content: "â–²";
-}
-
-ul.sf-menu.rtl ul {
-  left: auto;
-  right: 0;
 }
 
 ul.sf-menu.rtl,
@@ -389,12 +387,17 @@ ul.sf-menu.rtl li li.sfHover>ul {
   right: 12em;
 }
 
+ul.sf-menu.rtl ul {
+  left: auto;
+  right: 0;
+}
+
 ul.sf-menu.rtl .sf-sub-indicator {
   left: 0.75em;
   right: auto;
 }
 
-ul.sf-menu.rtl.sf-horizontal ul .sf-sub-indicator::after {
+ul.sf-menu.rtl.sf-horizontal ul .sf-sub-indicator:after {
   content: "â—„";
 }
 
@@ -410,13 +413,13 @@ ul.sf-menu.rtl li.sf-multicolumn-column {
   float: right;
 }
 
-ul.sf-menu.rtl.sf-vertical li:hover > ul,
-ul.sf-menu.rtl.sf-vertical li.sfHover > ul {
+ul.sf-menu.rtl.sf-vertical li:hover>ul,
+ul.sf-menu.rtl.sf-vertical li.sfHover>ul {
   left: auto;
   right: 12em;
 }
 
-ul.sf-menu.rtl.sf-vertical .sf-sub-indicator::after {
+ul.sf-menu.rtl.sf-vertical .sf-sub-indicator:after {
   content: "â—„";
 }
 
@@ -424,24 +427,24 @@ ul.sf-menu.rtl.sf-navbar li li {
   float: right;
 }
 
-ul.sf-menu.rtl.sf-navbar ul ul .sf-sub-indicator::after {
+ul.sf-menu.rtl.sf-navbar ul ul .sf-sub-indicator:after {
   content: "â—„";
 }
 
-ul.sf-menu.rtl.sf-navbar li li:hover > ul,
-ul.sf-menu.rtl.sf-navbar li li.sfHover > ul {
+ul.sf-menu.rtl.sf-navbar li li:hover>ul,
+ul.sf-menu.rtl.sf-navbar li li.sfHover>ul {
   left: auto;
   right: 0;
 }
 
-ul.sf-menu.rtl.sf-navbar li li li:hover > ul,
-ul.sf-menu.rtl.sf-navbar li li li.sfHover > ul {
+ul.sf-menu.rtl.sf-navbar li li li:hover>ul,
+ul.sf-menu.rtl.sf-navbar li li li.sfHover>ul {
   left: auto;
   right: 12em;
 }
 
 ul.sf-menu.rtl.sf-accordion.sf-expanded,
-ul.sf-menu.rtl.sf-accordion li.sf-expanded > ul {
+ul.sf-menu.rtl.sf-accordion li.sf-expanded>ul {
   right: auto !important;
 }
 
@@ -489,7 +492,7 @@ ul.sf-menu.rtl.sf-accordion li.sf-expanded > ul {
   display: block;
 }
 
-.clearfix::after {
+.clearfix:after {
   display: table;
   clear: both;
   content: "";
@@ -535,11 +538,11 @@ ul.sf-menu.rtl.sf-accordion li.sf-expanded > ul {
   padding: 0;
 }
 
-.item-list__comma-list li::after {
+.item-list__comma-list li:after {
   content: ", ";
 }
 
-.item-list__comma-list li:last-child::after {
+.item-list__comma-list li:last-child:after {
   content: "";
 }
 
@@ -662,7 +665,7 @@ table.sticky-header {
   vertical-align: middle;
 }
 
-.system-status-counter__status-icon::before {
+.system-status-counter__status-icon:before {
   display: block;
   width: 100%;
   height: 100%;
@@ -672,15 +675,15 @@ table.sticky-header {
   background-size: 16px;
 }
 
-.system-status-counter__status-icon--error::before {
+.system-status-counter__status-icon--error:before {
   background-image: url(https://clearone.com/core/misc/icons/e32700/error.svg);
 }
 
-.system-status-counter__status-icon--warning::before {
+.system-status-counter__status-icon--warning:before {
   background-image: url(https://clearone.com/core/misc/icons/e29700/warning.svg);
 }
 
-.system-status-counter__status-icon--checked::before {
+.system-status-counter__status-icon--checked:before {
   background-image: url(https://clearone.com/core/misc/icons/73b355/check.svg);
 }
 
@@ -967,10 +970,6 @@ div.tree-child-horizontal {
 .eu-cookie-withdraw-tab {
   padding: 4px 7px;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  transform: translate(-50%, -100%);
-  left: 50%;
 }
 
 .sliding-popup-bottom .eu-cookie-withdraw-tab {
@@ -986,6 +985,13 @@ div.tree-child-horizontal {
 .eu-cookie-withdraw-wrapper.sliding-popup-top,
 .eu-cookie-withdraw-wrapper.sliding-popup-top .eu-cookie-withdraw-banner {
   transform: scaleY(-1);
+}
+
+.eu-cookie-withdraw-tab {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -100%);
+  left: 50%;
 }
 
 .eu-cookie-withdraw-wrapper.sliding-popup-top .eu-cookie-withdraw-tab {
@@ -1032,7 +1038,7 @@ div.tree-child-horizontal {
   margin: 0;
 }
 
-.webform-element--title-inline > div {
+.webform-element--title-inline>div {
   display: inline;
 }
 
@@ -1051,7 +1057,7 @@ div.tree-child-horizontal {
   margin: 10px 0.5em 10px 0;
 }
 
-html.js .form-type-webform-image-select .select-wrapper::after {
+html.js .form-type-webform-image-select .select-wrapper:after {
   display: none;
 }
 
